@@ -28,20 +28,17 @@
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @group      Zend_Oauth
+ * @group      Zend_Oauth_Signature
  */
-class Zend_Oauth_ConfigTest extends PHPUnit\Framework\TestCase
+class Zend_Oauth_Signature_RsaTest extends PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    public function testSignatureWithoutAccessSecretIsHashedWithConsumerSecret()
     {
-        $this->config = new Zend_Oauth_Config();
+        $this->markTestIncomplete('Zend_Crypt_Rsa finalisation outstanding');
     }
 
-    /**
-     * @group ZF-12488
-     */
-    public function testAllowsOptionsAsRequestMethod()
+    public function testSignatureWithAccessSecretIsHashedWithConsumerAndAccessSecret()
     {
-        $this->config->setRequestMethod(Zend_Oauth::OPTIONS);
-        $this->assertEquals(Zend_Oauth::OPTIONS, $this->config->getRequestMethod());
+        $this->markTestIncomplete('Zend_Crypt_Rsa finalisation outstanding');
     }
 }
