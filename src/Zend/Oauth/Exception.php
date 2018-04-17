@@ -14,34 +14,17 @@
  *
  * @category   Zend
  * @package    Zend_Oauth
- * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
 
-
 /**
  * @category   Zend
  * @package    Zend_Oauth
- * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Oauth
  */
-class Zend_Oauth_ConfigTest extends PHPUnit\Framework\TestCase
+class Zend_Oauth_Exception extends Zend_Exception
 {
-    public function setUp()
-    {
-        $this->config = new Zend_Oauth_Config();
-    }
-
-    /**
-     * @group ZF-12488
-     */
-    public function testAllowsOptionsAsRequestMethod()
-    {
-        $this->config->setRequestMethod(Zend_Oauth::OPTIONS);
-        $this->assertEquals(Zend_Oauth::OPTIONS, $this->config->getRequestMethod());
-    }
 }
